@@ -1,30 +1,19 @@
 
-# 🏋️‍♂️ Pose Embedding Caching & Comparison in Flutter
+# Pose Embedding Caching & Comparison in Flutter
 
-This project compares different vector database technologies for caching and comparing **pose embeddings** generated from exercise detection models in Flutter apps.
-
----
-
-## 📌 Use Case
-
-> ✅ Cache **pose embeddings** for each exercise
-> ✅ Match **current pose embedding** with cached ones
-> ✅ Analyze performance using **vector similarity (cosine distance)**
-
----
 
 ## ⚖️ Comparison Table
 
-| Feature                    | `pgvector (Supabase)`          | `ObjectBox (Flutter)`           | Other Vector DBs (Qdrant, Pinecone, etc.)  |
-| -------------------------- | ------------------------------ | ------------------------------- | ------------------------------------------ |
-| **Local or Remote**        | 🟡 Remote / Self-hosted        | ✅ Fully local                   | Depends (Qdrant = local, Pinecone = cloud) |
-| **Flutter Native**         | ✅ Via Supabase client          | ✅ Dart-native                   | 🟡 HTTP/gRPC based only                    |
-| **Offline Capable**        | ❌ No                           | ✅ Yes                           | ✅ Qdrant if self-hosted                    |
-| **Ease of Setup**          | 🟡 Requires Docker/Supabase    | ✅ Easy with Dart plugin         | 🟡 HTTP setup needed                       |
-| **Similarity Search**      | ✅ Built-in (cosine, L2, inner) | 🟡 Manual (custom Dart logic)   | ✅ Built-in                                 |
-| **Query Language**         | ✅ SQL-based                    | ✅ Dart API                      | 🟡 Varies (HTTP, REST, etc.)               |
-| **Embedding Size Support** | ✅ Up to 1536+                  | 🟡 Good for 128–512             | ✅ Up to 2048+                              |
-| **Best Use Case**          | ✅ Central training, analytics  | ✅ Personal, on-device inference | ✅ Multi-user search and retrieval          |
+| Feature                    | `pgvector (Supabase)`          | `ObjectBox (Flutter)`           | 
+| -------------------------- | ------------------------------ | ------------------------------- | 
+| **Local or Remote**        | 🟡 Remote / Self-hosted        | ✅ Fully local                   |
+| **Flutter Native**         | ✅ Via Supabase client          | ✅ Dart-native                   | 
+| **Offline Capable**        | ❌ No                           | ✅ Yes                           |
+| **Ease of Setup**          | 🟡 Requires Docker/Supabase    | ✅ Easy with Dart plugin         | 
+| **Similarity Search**      | ✅ Built-in (cosine, L2, inner) | 🟡 Manual (custom Dart logic)   | 
+| **Query Language**         | ✅ SQL-based                    | ✅ Dart API                      |
+| **Embedding Size Support** | ✅ Up to 1536+                  | 🟡 Good for 128–512             |
+| **Best Use Case**          | ✅ Central training, analytics  | ✅ Personal, on-device inference | 
 
 ---
 
